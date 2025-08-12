@@ -1,0 +1,449 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Koreon Tech — Tecnologia, Software, Nuvem, IA, Controle,
+Automação & suporte técnico global</title>
+<meta name="description" content="Koreon: desenvolvimento de software,
+soluções em nuvem, IA, automação de processos, segurança, controle e
+suporte técnico global." />
+<meta name="theme-color" content="#0b1b2b">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap"
+rel="stylesheet">
+<style>
+:root{
+--bg:#0b1b2b; /* azul marinho fundo */
+--surface:#0f2742; /* cartões/nav */
+--surface-2:#0d2137;
+--text:#e6f1ff; /* texto principal */
+--muted:#a7c2e9; /* texto secundário */
+--primary:#2d7fff; /* ação */
+--primary-2:#4aa3ff; /* gradiente */
+--stroke:#153553; /* bordas */
+--rad:18px; --max:1180px;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+margin:0; font-family:Inter,system-ui,-apple-system,Segoe
+UI,Roboto,Ubuntu,'Helvetica Neue',Arial;
+color:var(--text); background:
+radial-gradient(1100px 700px at 10% -10%, #123a64 0%, transparent 60%),
+radial-gradient(900px 600px at 90% 10%, #0e2d54 0%, transparent 55%),
+var(--bg);
+line-height:1.6; scroll-behavior:smooth;
+}
+a{color:inherit; text-decoration:none}
+img{max-width:150%; height:auto}
+.wrap{max-width:var(--max); margin:0 auto; padding:0 20px}
+/* Header */
+header{
+position:sticky; top:0; z-index:50;
+background:#0b1b2bd9; backdrop-filter:blur(10px); border-bottom:1px
+solid var(--stroke);
+}
+.nav{display:flex; align-items:center; justify-content:space-between;
+gap:16px; padding:12px 0}
+.brand{display:flex; align-items:center; gap:12px}
+.logo{width:40px; height:40px}
+.brand b{letter-spacing:1.2px}
+.menu{display:flex; gap:14px; align-items:center}
+.menu a{padding:10px 12px; border-radius:10px}
+.menu a:hover{background:#0e2a45}
+.cta{padding:10px 14px; border-radius:12px; font-weight:700; color:#061423;
+background:linear-gradient(135deg,var(--primary),var(--primary-2));
+box-shadow:0 0 22px #2d7fff44}
+.burger{display:none; width:42px; height:42px; border:1px solid
+var(--stroke); border-radius:10px; background:#0d2137}
+@media (max-width:920px){
+.menu{display:none; position:fixed; inset:64px 12px auto;
+flex-direction:column; background:#0e2339f2; border:1px solid
+var(--stroke); border-radius:16px; padding:12px}
+.menu.open{display:flex}
+.burger{display:inline-grid; place-items:center}
+}
+/* Sections */
+section{padding:80px 0}
+h1,h2,h3{margin:0 0 10px}
+h1{font-size:clamp(28px,4.6vw,48px)}
+h2{font-size:clamp(22px,3vw,32px)}
+h3{font-size:clamp(18px,2.2vw,22px)}
+p{margin:0 0 10px}
+.subtitle{color:var(--muted)}
+.grid{display:grid; gap:22px}
+@media (min-width:900px){ .cols-2{grid-template-columns:1.1fr .9fr}
+.cols-3{grid-template-columns:repeat(3,1fr)} }
+.card{
+background:linear-gradient(180deg,var(--surface),var(--surface-2));
+border:1px solid var(--stroke); border-radius:var(--rad); padding:24px;
+box-shadow:0 12px 28px #0006;
+}
+/* Hero */
+.hero{position:relative; overflow:hidden}
+.hero .wrap{padding:96px 0 70px; text-align:center}
+.hero .pulse{position:absolute; inset:-20%; background:
+radial-gradient(520px 520px at 70% 40%, #2d7fff22 0%, #4aa3ff11 40%,
+transparent 70%);
+animation:floaty 8s ease-in-out infinite alternate; pointer-events:none}
+@keyframes floaty{from{transform:translateY(-8px)}
+to{transform:translateY(8px)}}
+.hero .bigcta{display:flex; gap:14px; justify-content:center;
+flex-wrap:wrap; margin-top:24px}
+.btn{padding:12px 18px; border-radius:14px; border:1px solid
+var(--stroke); background:#0d2137}
+.btn--primary{background:linear-gradient(135deg,var(--primary),var(--primary-2));
+color:#07121f; border:none}
+.badges{display:flex; gap:10px; justify-content:center;
+flex-wrap:wrap; margin-top:22px}
+.badge{padding:6px 10px; border:1px solid var(--stroke);
+border-radius:999px; color:#cfe3ff; background:#0e2339}
+/* Services tiles */
+.srv{display:flex; gap:12px; align-items:flex-start}
+.icon{min-width:22px; width:22px; height:22px; color:#8bc0ff}
+.srv ul{margin:6px 0 0 18px; padding:0; color:#c7dcff}
+/* Portfolio */
+.case{display:flex; flex-direction:column; gap:10px}
+.thumb{aspect-ratio:16/9; border-radius:12px; background:#0c1f33;
+border:1px solid var(--stroke); display:grid; place-items:center;
+color:#8bc0ff}
+/* Contact */
+form{display:grid; gap:12px}
+input,textarea{width:100%; padding:12px 14px; border-radius:12px;
+border:1px solid var(--stroke); background:#0e2339; color:var(--text)}
+textarea{min-height:120px; resize:vertical}
+.hint{font-size:12px; color:#9bbbe0}
+.ok{color:#00e0a4} .err{color:#ff6b6b}
+/* Reveal on scroll */
+.reveal{opacity:0; transform:translateY(16px); transition:.6s ease}
+.reveal.in{opacity:1; transform:none}
+/* Reduced motion */
+@media (prefers-reduced-motion:reduce){ .hero .pulse{display:none}
+*{animation:none !important; transition:none !important} }
+/* Footer */
+footer{padding:44px 0; color:#8fb1dc; border-top:1px solid
+var(--stroke); text-align:center}
+</style>
+
+<!-- SEO Schema -->
+<script type="application/ld+json">
+{
+"@context":"https://schema.org",
+"@type":"Organization",
+"name":"Koreon",
+"url":"https://www.koreontech.com.br",
+"logo":"https://www.koreon.example/logo.png",
+"description":"Desenvolvimento de software, nuvem, IA, automação,
+segurança, controle e suporte técnico global.",
+"address":{"@type":"PostalAddress","addressCountry":"BR"},
+"sameAs":[]
+}
+</script>
+</head>
+<body>
+<!-- Header -->
+<header>
+<div class="wrap nav">
+<a href="#/home" class="brand" aria-label="Koreon">
+<!-- Logo SVG minimalista -->
+<svg class="logo" viewBox="0 0 64 64" fill="none" aria-hidden="true">
+<defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop
+stop-color="#2d7fff"/><stop offset="1"
+stop-color="#4aa3ff"/></linearGradient></defs>
+<path d="M10 10h20c12 0 12 18 0 18h-9l17 26H28L14 32V10Z"
+stroke="url(#g)" stroke-width="6" stroke-linejoin="round"/>
+<circle cx="50" cy="16" r="3" fill="url(#g)"/><circle cx="54" cy="28"
+r="3" fill="url(#g)"/><circle cx="50" cy="40" r="3" fill="url(#g)"/>
+<path d="M40 16h10M40 28h14M40 40h10" stroke="url(#g)"
+stroke-width="4" stroke-linecap="round"/>
+</svg>
+<b>KOREON TECH</b>
+</a>
+<nav>
+<button id="burger" class="burger" aria-label="Abrir menu">
+<svg width="22" height="22" viewBox="0 0 24 24" fill="#8bc0ff"><path
+d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+</button>
+<div id="menu" class="menu">
+<a href="#/home">Home</a>
+<a href="#/sobre">Sobre nós</a>
+<a href="#/servicos">Serviços</a>
+<a href="#/portfolio">Portfólio</a>
+<a href="#/contato" class="cta">Contato</a>
+</div>
+</nav>
+</div>
+</header>
+
+<!-- Main (conteúdo muda via router) -->
+<main id="app" role="main" aria-live="polite"></main>
+
+<!-- Footer -->
+<footer>
+<div class="wrap">© <span id="y"></span> Koreon Tech — inovação com
+credibilidade • <a href="#/privacidade">Privacidade</a></div>
+</footer>
+
+<script>
+// helpers
+const $ = s => document.querySelector(s);
+document.getElementById('y').textContent = new Date().getFullYear();
+
+// menu mobile
+const burger = $('#burger'), menu = $('#menu');
+burger.addEventListener('click',()=>menu.classList.toggle('open'));
+menu.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>menu.classList.remove('open')));
+
+// ícones (SVG inline)
+function Icon(name){
+const base = 'currentColor';
+switch(name){
+case 'code': return `<svg class="icon" viewBox="0 0 24 24"
+fill="${base}"><path d="M9.4 16.6 3.8 12l5.6-4.6L8 6 1 12l7 6
+1.4-1.4zm5.2 0L23 12l-8.4-6L16 6l7 6-7 6-1.4-1.4z"/></svg>`;
+case 'cloud': return `<svg class="icon" viewBox="0 0 24 24"
+fill="${base}"><path d="M6 19h11a5 5 0 0 0 .6-9.98A7 7 0 0 0 5.1 9.9
+4.5 4.5 0 0 0 6 19z"/></svg>`;
+case 'ai': return `<svg class="icon" viewBox="0 0 24 24"
+fill="${base}"><path d="M12 2a3 3 0 0 1 3 3v1h1a3 3 0 1 1 0 6h-1v1h1a3
+3 0 1 1 0 6h-1v1a3 3 0 1 1-6 0v-1H8a3 3 0 1 1 0-6h1v-1H8a3 3 0 1 1
+0-6h1V5a3 3 0 0 1 3-3z"/></svg>`;
+case 'shield': return `<svg class="icon" viewBox="0 0 24 24"
+fill="${base}"><path d="M12 2 19 6v6c0 5-3.8 9.7-7
+10-3.2-.3-7-5-7-10V6l7-4z"/></svg>`;
+case 'gear': return `<svg class="icon" viewBox="0 0 24 24"
+fill="${base}"><path d="M19.4 13a7.7 7.7 0 0 0
+0-2l2-1.5-2-3.5-2.4.6a7.7 7.7 0 0 0-1.7-1L15 2h-6l-.3 2.6a7.7 7.7 0 0
+0-1.7 1L4.6 6l-2 3.5L4.6 11a7.7 7.7 0 0 0 0 2l-2 1.5 2 3.5 2.4-.6a7.7
+7.7 0 0 0 1.7 1L9 22h6l.3-2.6a7.7 7.7 0 0 0 1.7-1l2.4.6 2-3.5L19.4
+13zM12 15a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>`;
+case 'tools': return `<svg class="icon" viewBox="0 0 24 24"
+fill="${base}"><path d="M21 3 14 10l-1-1-2 2 6 6 2-2-1-1 7-7-4-4zM3
+14l5-5 2 2-5 5H3v-2z"/></svg>`;
+default: return `<svg class="icon" viewBox="0 0 24 24"
+fill="${base}"><circle cx="12" cy="12" r="8"/></svg>`;
+}
+}
+
+// componentes
+function CardSrv(title, desc, iconSvg, items=[]){
+return `
+<article class="card srv reveal">
+${iconSvg}
+<div>
+<h3>${title}</h3>
+<p>${desc}</p>
+${items.length?`<ul>${items.map(i=>`<li>${i}</li>`).join('')}</ul>`:''}
+</div>
+</article>`;
+}
+function Case(title, tag, text){
+return `
+<article class="card case reveal">
+<div class="thumb">Prévia do projeto</div>
+<div>
+<h3>${title}</h3>
+<p class="subtitle">${tag}</p>
+<p>${text}</p>
+</div>
+</article>`;
+}
+
+// páginas (templates)
+const Pages = {
+home: () => `
+<section class="hero">
+<div class="pulse" aria-hidden="true"></div>
+<div class="wrap reveal">
+<h1>Koreon — Tecnologia que impulsiona o seu negócio</h1>
+<p class="subtitle">Desenvolvimento de software • Soluções em nuvem •
+Inteligência Artificial • Automação • Segurança • Suporte &
+consertos</p>
+<div class="bigcta">
+<a class="btn btn--primary" href="#/contato">Fale com a gente</a>
+<a class="btn" href="#/servicos">Ver serviços</a>
+</div>
+<div class="badges" aria-label="competências">
+<span class="badge">Apps & APIs</span>
+<span class="badge">Cloud & DevOps</span>
+<span class="badge">IA & Automação</span>
+<span class="badge">Segurança</span>
+<span class='badge'>Controle de acesso</span>
+<span class="badge">Suporte técnico</span>
+</div>
+</div>
+</section>
+<section class="wrap">
+<div class="grid cols-3">
+${CardSrv('Desenvolvimento de Software','Web, mobile e integrações com
+foco em performance e UX.', Icon('code'),
+['SaaS, e‑commerce, portais','APIs REST/GraphQL','Design system &
+acessibilidade'])}
+${CardSrv('Soluções em Nuvem','Arquitetura escalável em AWS, Azure ou
+GCP.', Icon('cloud'),
+['Kubernetes & Docker','CI/CD & IaC (Terraform)','Observabilidade & FinOps'])}
+${CardSrv('Inteligência Artificial','Modelos e automações aplicadas ao
+negócio, Machine Learning.', Icon('ai'),
+['Assistentes & chatbots','Classificação e previsão','RPA com IA'])}
+${CardSrv('Controle de acesso','Instalação e manutenção,
+reconhecimento facial',Icon('controle')
+['digital, cartão de acesso, tag, portão eletrônico'])}
+</div>
+</section>
+`,
+sobre: () => `
+<section class="wrap grid cols-2">
+<div class="card reveal">
+<h2>Sobre a Koreon Tech</h2>
+<p class="subtitle">Inovação com credibilidade e foco em resultado.</p>
+<p>Fundada para ser o <b>núcleo</b> que conecta tecnologia, pessoas e
+futuro, a Koreon entrega soluções completas — do diagnóstico à
+operação.</p>
+<h3 style="margin-top:12px">Missão</h3>
+<p>Transformar ideias em produtos e processos digitais seguros e escaláveis.</p>
+<h3>Visão</h3>
+<p>Ser referência em inovação prática, onde tecnologia gera impacto
+real nos negócios.</p>
+<h3>Valores</h3>
+<p>Transparência, confiabilidade, melhoria contínua e foco no cliente.</p>
+</div>
+<aside class="card reveal">
+<h2>Nosso histórico</h2>
+<p>Projetos em varejo, saúde, educação e indústria: implantação de
+<b>cloud</b>, construção de <b>APIs</b>, <b>aplicativos</b>,
+<b>automação</b> e programas de <b>segurança</b>.</p>
+<p>Atendimento 100% online, com rituais ágeis, SLAs e indicadores claros.</p>
+</aside>
+</section>
+`,
+servicos: () => `
+<section class="wrap">
+<h2>Serviços</h2>
+<p class="subtitle" style="margin-bottom:14px">Soluções organizadas
+por frentes, com ícones ilustrativos.</p>
+<div class="grid cols-3">
+${CardSrv('Desenvolvimento de Software','Do MVP ao enterprise.', Icon('code'),
+['Web, Mobile, Microserviços','Integrações (pagamentos,
+ERPs)','Qualidade: testes, SAST/DAST'])}
+${CardSrv('Soluções em Nuvem','Infra segura e escalável.', Icon('cloud'),
+['Arquitetura AWS/Azure/GCP','Kubernetes, CI/CD, IaC','Observabilidade
+(SLIs/SLOs)'])}
+${CardSrv('Inteligência Artificial','IA aplicada ao negócio.', Icon('ai'),
+['Chatbots e copilots','Análise preditiva','Detecção de anomalias'])}
+${CardSrv('Automação de Processos','Ganhe eficiência.', Icon('gear'),
+['RPA & integrações','ETL/ELT e orquestração','Workflows low-code'])}
+${CardSrv('Segurança da Informação','Ofensiva & defensiva.', Icon('shield'),
+['Pentest Web/Mobile/API','Hardening e IAM/SSO','SIEM, resposta a incidentes'])}
+${CardSrv('Conserto & Suporte','Helpdesk e manutenção.', Icon('tools'),
+['Formatação e upgrades','Limpeza e troca de peças','Suporte remoto
+e presencial'])}
+${CardSrv('Controle de acesso','Instalação e manutenção,
+reconhecimento facial',Icon('controle')
+['digital, cartão de acesso, tag, portão eletrônico'])}
+</div>
+</section>
+`,
+portfolio: () => `
+<section class="wrap">
+<h2>Portfólio & Cases</h2>
+<p class="subtitle" style="margin-bottom:14px">Exemplos de projetos e
+resultados.</p>
+<div class="grid cols-3">
+${Case('Plataforma SaaS B2B','Dev • Cloud • Segurança','Arquitetura em
+Kubernetes, CI/CD GitHub Actions e login com SSO. Redução de 40% no
+tempo de deploy.')}
+${Case('Chatbot de Suporte com IA','IA • Automação','Assistente
+treinado nos documentos da empresa, integrando CRM. Acurácia de 85%
+nas respostas.')}
+${Case('Pentest para e‑commerce','Segurança','Relatório com
+priorização CVSS, correções guiadas e reteste, elevando nota OWASP.')}
+</div>
+</section>
+`,
+contato: () => `
+<section class="wrap grid cols-2">
+<div class="card reveal">
+<h2>Contato</h2>
+<p class="subtitle">Preencha o formulário e retornamos em breve.</p>
+<form id="f" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+<input name="nome" placeholder="Seu nome" required />
+<input type="email" name="email" placeholder="Seu e-mail" required />
+<input name="telefone" placeholder="Telefone (opcional)" />
+<textarea name="mensagem" placeholder="Conte-nos sobre o projeto ou
+problema" required></textarea>
+<button class="btn btn--primary" type="submit">Enviar mensagem</button>
+<span id="fs" class="hint" role="status"></span>
+</form>
+<div style="margin-top:16px">
+<p><b>Telefone:</b> (19) 98171‑5233</p>
+<p><b>E-mail:</b> koreonteches@gmail.com</p>
+</div>
+</div>
+<aside class="card reveal" aria-label="Mapa e endereço">
+<h2>Atendimento online global</h2>
+<p class="subtitle">mapa mundial.</p>
+<div style="border-radius:14px; overflow:hidden; border:1px solid
+var(--stroke); margin-top:10px">
+
+</div>
+</aside>
+</section>
+`,
+privacidade: () => `
+<section class="wrap">
+<h2>Política de Privacidade</h2>
+<p class="subtitle">Respeitamos sua privacidade e tratamos dados
+conforme a LGPD.</p>
+</section>
+`
+};
+
+// roteador por hash (SPA)
+function render(){
+const route = (location.hash.replace('#/','') || 'home').split('?')[0];
+const view = Pages[route] ? Pages[route]() : Pages.home();
+$('#app').innerHTML = view;
+// reveal on scroll
+const io = new IntersectionObserver(es=>es.forEach(e=>e.isIntersecting&&e.target.classList.add('in')),
+{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+// form handler
+const form = document.getElementById('f');
+if(form){
+form.addEventListener('submit', async (e)=>{
+e.preventDefault();
+const status = document.getElementById('fs');
+status.textContent = 'Enviando...';
+try{
+const res = await fetch(form.action, { method:'POST', body: new
+FormData(form), headers:{ 'Accept':'application/json' }});
+if(res.ok){ status.innerHTML = '<span class="ok">Mensagem enviada com
+sucesso!</span>'; form.reset(); }
+else{ status.innerHTML = '<span class="err">Não foi possível enviar.
+Tente novamente.</span>'; }
+}catch(err){ status.innerHTML = '<span class="err">Falha de rede.
+Verifique sua conexão.</span>'; }
+});
+}
+// acessibilidade: foco inicial
+$('#app').setAttribute('tabindex','-1'); $('#app').focus({preventScroll:true});
+window.scrollTo({top:0, behavior:'smooth'});
+}
+window.addEventListener('hashchange', render);
+window.addEventListener('load', ()=>{ if(!location.hash) location.hash
+= '#/home'; render(); });
+</script>
+</body>
+</html>
+<!--
+Koreon - Tecnologia, Software, Nuvem, IA & Automação
+Desenvolvido com foco em acessibilidade, performance e SEO.
+Código otimizado para SPA com roteamento por hash.
+Ícones SVG inline para melhor performance e acessibilidade.
+Inclui componentes reutilizáveis e reveal on scroll.
+Licença: MIT
+Autor: KOREON
+Data: 2025
+-->
+<!--
