@@ -237,17 +237,15 @@
   border-radius: 14px;
   border: 1px solid var(--stroke);
   background-color: linear-gradient(135deg, #2d7fff, #4aa3ff, #2d7fff);    
-  cursor: pointer; /* Adiciona o cursor de clique */
+  cursor: pointer; 
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .btn--primary {
-  /* Adicionando uma sombra inicial sutil */
   box-shadow: 0 4px 15px #2d7fff33;
 }
 
 .btn--primary:hover {
-  /* Efeito ao passar o mouse: o botão levanta e a sombra aumenta */
   transform: translateY(-3px);
   box-shadow: 0 8px 25px #4aa3ff55;
 }
