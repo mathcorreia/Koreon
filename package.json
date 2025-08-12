@@ -1,0 +1,22 @@
+{
+  "name": "koreon",
+  "version": "1.0.0",
+  "description": "Puramente um site para expor minha empresa ao publico",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mathcorreia/Koreon.git"
+  },
+  "author": "Matheus Correia and Nathalia Staffocker",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mathcorreia/Koreon/issues"
+  },
+  "homepage": "https://github.com/mathcorreia/Koreon#readme"
+}
