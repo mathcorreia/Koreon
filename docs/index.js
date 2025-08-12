@@ -138,7 +138,7 @@ const Pages = {
       <div class="card reveal">
         <h2>Contato</h2>
         <p class="subtitle">Preencha o formulário e retornamos em breve.</p>
-        <form id="f" action="https://formspree.io/f/YOUR_FORMSPREE_ID" method="POST">
+        <form id="f" action="https://formspree.io/f/xpwlbljl" method="POST">
           <input name="nome" placeholder="Seu nome" required />
           <input type="email" name="email" placeholder="Seu e-mail" required />
           <input name="telefone" placeholder="Telefone (opcional)" />
