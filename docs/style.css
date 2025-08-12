@@ -37,7 +37,7 @@
 
     .brand{display:flex; align-items:center; gap:12px}
     .logo{width:70px; height:70px;}
-    .brand b{letter-spacing:1.2px}
+    .brand b{letter-spacing:1.2px;}
     .menu{display:flex; gap:14px; align-items:center}
     .menu a{padding:10px 12px; border-radius:10px}
     .menu a:hover{background:#0e2a45}
@@ -57,6 +57,8 @@
       .menu.open{display:flex}
       .burger{display:inline-grid; place-items:center}
     }
+       .kor{font: arial black; color:#2d7fff; width: 10em; font-size: 1.5em; height: 1.8em; left: 20%;}
+
 
     /* Sections */
 
@@ -135,3 +137,4 @@
     /* Footer */
 
     footer{padding:44px 0; color:#8fb1dc; border-top:1px solid var(--stroke); text-align:center}
+
