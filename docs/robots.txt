@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://mathcorreia.github.io/Koreon/sitemap.xml
