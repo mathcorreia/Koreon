@@ -155,7 +155,7 @@ const Pages = {
         <h2>Atendimento online global</h2>
         <p class="subtitle">Disponíveis para projetos em qualquer lugar do mundo.</p>
         <div class="map-container">
-          <img src="../assets/globo.png" alt="Globo representando atendimento mundial" class="world-map">
+          <img src="./assets/globo.png" alt="Globo representando atendimento mundial" class="world-map">
         </div>
       </aside>
     </section>
