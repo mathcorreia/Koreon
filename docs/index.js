@@ -51,19 +51,19 @@ const Pages = {
     <section class="hero">
       <div class="pulse" aria-hidden="true"></div>
       <div class="wrap reveal">
-        <h1>Koreon — Tecnologia que impulsiona o seu negócio</h1>
-        <p class="subtitle">Desenvolvimento de software • Soluções em nuvem • Inteligência Artificial • Automação • Segurança • Suporte & consertos</p>
+        <h1 class="hero-title">Koreon — Tecnologia que impulsiona o seu negócio</h1>
+        <p class="subtitle">Soluções completas em Software, Nuvem, IA, Automação, Segurança e Suporte Técnico.</p>
         <div class="bigcta">
           <a class="btn btn--primary" href="#/contato">Fale com a gente</a>
           <a class="btn" href="#/servicos">Ver serviços</a>
         </div>
         <div class="badges" aria-label="competências">
-          <span class="badge">Apps & APIs</span>
-          <span class="badge">Cloud & DevOps</span>
-          <span class="badge">IA & Automação</span>
-          <span class="badge">Segurança</span>
-          <span class='badge'>Controle de acesso</span>
-          <span class="badge">Suporte técnico</span>
+          <span class="badge">${Icon('code')} <span>Apps & APIs</span></span>
+          <span class="badge">${Icon('cloud')} <span>Cloud & DevOps</span></span>
+          <span class="badge">${Icon('ai')} <span>IA & Automação</span></span>
+          <span class="badge">${Icon('shield')} <span>Segurança</span></span>
+          <span class="badge">${Icon('shield')} <span>Controle de acesso</span></span>
+          <span class="badge">${Icon('tools')} <span>Suporte técnico</span></span>
         </div>
       </div>
     </section>
@@ -153,9 +153,9 @@ const Pages = {
       </div>
       <aside class="card reveal" aria-label="Mapa e endereço">
         <h2>Atendimento online global</h2>
-        <p class="subtitle">mapa mundial.</p>
-        <div style="border-radius:14px; overflow:hidden; border:1px solid var(--stroke); margin-top:10px">
-
+        <p class="subtitle">Disponíveis para projetos em qualquer lugar do mundo.</p>
+        <div class="map-container">
+          <img src="../assets/globo.png" alt="Globo representando atendimento mundial" class="world-map">
         </div>
       </aside>
     </section>

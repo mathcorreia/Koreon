@@ -41,7 +41,9 @@
     .menu{display:flex; gap:14px; align-items:center}
     .menu a{padding:10px 12px; border-radius:10px}
     .menu a:hover{background:#0e2a45}
-    .kor{font: arial black; color:#2d7fff; width: 10em; font-size: 1.5em; height: 1.8em; left: 20%;}
+    .kor{font: arial black; color:#2d7fff; width: 10em; font-size: 1.5em; height: 1.8em; left: 20%;
+      background-color: linear-gradient(135deg, #2d7fff, #4aa3ff, #2d7fff);    
+}
 
 
     .cta{padding:10px 14px; border-radius:12px; font-weight:700; color:#061423;
@@ -180,4 +182,52 @@
     width: 35px;
     height: 35px;
   }
+}
+/* Estilo para o Mapa-Múndi */
+.map-container {
+  margin-top: 30px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px; 
+  min-height: 250px; 
+}
+
+.world-map {
+  max-width: 200%; 
+  width: flex flex 200em; 
+  background-color: linear-gradient(135deg, #2d7fff, #4aa3ff, #2d7fff);    
+  height: auto;
+  opacity: 0.8; 
+}
+
+/* Animação para o Título do Hero */
+.hero-title {
+  animation: text-glow 2.5s ease-in-out infinite alternate;
+}
+
+@keyframes text-glow {
+  from {
+    text-shadow: 0 0 10px #2d7fff44, 0 0 20px #2d7fff33, 0 0 30px #2d7fff22;
+  }
+  to {
+    text-shadow: 0 0 20px #4aa3ff55, 0 0 30px #4aa3ff44, 0 0 40px #4aa3ff33;
+  }
+}
+
+/* Melhorias nos Badges */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px; /* Espaço entre o ícone e o texto */
+  padding: 8px 14px; /* Aumentando um pouco o padding */
+  font-size: 14px;
+}
+
+.badge .icon {
+  width: 16px; /* Tamanho do ícone dentro do badge */
+  height: 16px;
+  color: var(--primary); /* Cor do ícone */
 }
